@@ -1,0 +1,22 @@
+h1 {
+    margin-bottom: 100px;
+    margin-top: 150px;
+    margin-left: 70px;
+    text-align: left;
+}
+.container {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+img {
+    width: 600px;
+}
+
+h4, h3 {
+    padding-top: 20px;
+}
+
+h4{
+    padding-bottom: 20px;
+}

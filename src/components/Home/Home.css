@@ -1,0 +1,20 @@
+.Home img {
+  background-position: center;
+  padding: 10px;
+  width: 1200px;
+}
+
+h1 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-size: larger;
+  margin-top: 35px;
+  margin-bottom: 70px;
+  padding: 10px;
+}

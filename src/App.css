@@ -1,6 +1,14 @@
 .App {
   text-align: center;
 }
+img{
+  width: 600px;
+}
+
+body {
+  font-family: 'Gilda Display', serif;
+  
+}
 
 .App-logo {
   height: 40vmin;
