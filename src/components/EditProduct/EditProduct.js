@@ -53,7 +53,7 @@ const {id} = useParams();
      async function submitHandler(event) {
        event.preventDefault();
        try {
-         await axios.put(`${API}${id}`, product);
+         await axios.put(`${API}/${id}`, product);
          navigate(`/products/${id}`);
        } catch (error) {
          return error;

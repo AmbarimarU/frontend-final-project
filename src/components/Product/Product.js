@@ -20,7 +20,7 @@ function Product() {
   async function fetProductById(id) {
     try {
       setIsLoading(true);
-      let result = await axios.get(`${API}${id}`);
+      let result = await axios.get(`${API}/${id}`);
 
       setProduct(result.data);
       setIsLoading(false);
