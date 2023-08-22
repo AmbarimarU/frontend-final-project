@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
 import './EditProduct.css'
+import API from '../common/Api/Api.js'
 
 function EditProduct() {
 
@@ -20,7 +21,7 @@ const {id} = useParams();
 
   const getProductData = async () => {
     try {
-        let result = await axios.get(`http://localhost:3001/products/${id}`);
+        let result = await axios.get(`${API}${id}`);
 
         setProduct(result.data);
     } catch (error) {
@@ -30,6 +31,7 @@ const {id} = useParams();
 
   useEffect(() => {
     getProductData();
+    // eslint-disable-next-line
   }, []);
 
     function textChangeHandler(event) {
@@ -51,7 +53,7 @@ const {id} = useParams();
      async function submitHandler(event) {
        event.preventDefault();
        try {
-         await axios.put(`http://localhost:3001/products/${id}`, product);
+         await axios.put(`${API}${id}`, product);
          navigate(`/products/${id}`);
        } catch (error) {
          return error;

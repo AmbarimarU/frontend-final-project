@@ -2,10 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Products.css";
 import { Link } from "react-router-dom";
-import Overlay from '../common/Overlay/Overlay.js';
-import API from '../common/Api/Api';
-
-
+import Overlay from "../common/Overlay/Overlay.js";
+import API from "../common/Api/Api";
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -13,19 +11,21 @@ function Products() {
 
   async function fetchProducts() {
     try {
-       setIsLoading(true);
+      setIsLoading(true);
       let productsData = await axios.get(`${API}`);
       setProducts(productsData.data);
-       setIsLoading(false);
+      setIsLoading(false);
     } catch (error) {
-      return error;
-       setIsLoading(false);
+      console.log(error);
+      setIsLoading(false);
     }
   }
 
   useEffect(() => {
     fetchProducts();
   }, []);
+
+
 
   return (
     <Overlay isLoading={isLoading}>
