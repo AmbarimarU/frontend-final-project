@@ -59,5 +59,5 @@ A promise-based HTTP client for making API requests.
 ### Deployment
 
 - Backend [GitHub](https://backend-final-herbal-store.onrender.com/products)
-- Frontend [DeployedSite]()
+- Frontend [DeployedSite](https://final-project-frontend-herbalstore.netlify.app/)
 
