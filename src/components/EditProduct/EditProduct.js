@@ -21,7 +21,7 @@ const {id} = useParams();
 
   const getProductData = async () => {
     try {
-        let result = await axios.get(`${API}${id}`);
+        let result = await axios.get(`${API}/${id}`);
 
         setProduct(result.data);
     } catch (error) {
@@ -66,9 +66,9 @@ const {id} = useParams();
       <h1>Edit Product</h1>
 
       <div>
-        <div className="form-div">
+        <div className="edit-form-div">
           <form onSubmit={submitHandler}>
-            <div className="name-input">
+            <div className="edit-input">
               <label>
                 <span>Name:</span>
               </label>
@@ -82,7 +82,7 @@ const {id} = useParams();
               />
             </div>
 
-            <div className="url-input">
+            <div className="edit-input">
               <label>
                 <span>Photo:</span>
               </label>
@@ -96,7 +96,7 @@ const {id} = useParams();
               />
             </div>
 
-            <div className="type-input">
+            <div className="edit-input">
               <label>
                 <span>Type:</span>
               </label>
@@ -110,7 +110,7 @@ const {id} = useParams();
               />
             </div>
 
-            <div className="description-input">
+            <div className="edit-input">
               <label>
                 <span>Description/Benefits:</span>
               </label>
@@ -124,7 +124,7 @@ const {id} = useParams();
               />
             </div>
 
-            <div className="rating-input">
+            <div className="edit-input">
               <label>
                 <span>Rating:</span>
               </label>
@@ -139,7 +139,7 @@ const {id} = useParams();
               />
             </div>
 
-            <div className="favorite-input">
+            <div className="edit-input">
               <label>
                 <span>Favorite:</span>
               </label>
@@ -153,7 +153,7 @@ const {id} = useParams();
               />
             </div>
 
-            <div className="stock-input">
+            <div className="edit-input">
               <label>
                 <span>In Stock:</span>
               </label>

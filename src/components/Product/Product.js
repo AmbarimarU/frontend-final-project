@@ -38,7 +38,7 @@ function Product() {
 
     if (lastConfirmationToProcede) {
       try {
-        let result = await axios.delete(`${API}${id}`);
+        let result = await axios.delete(`${API}/${id}`);
         const { name } = result.data;
         alert(`${name} has been Deleted successfully!`);
         navigate("/products");
